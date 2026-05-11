@@ -143,7 +143,7 @@ resource "aws_instance" "my_ec2" {
     tags = {
         Name = "my-ec2"
     }
-} 
+}
 
 
 # 생성된 ec2 의 public  ip 를 출력

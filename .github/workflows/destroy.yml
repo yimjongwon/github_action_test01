@@ -1,6 +1,9 @@
+# .github/workflows/destroy.yml
+
+
 name: "Terraform Destroy"
 on:
-  workflow_dispatch: # github action 탭에서 수동 실행 버튼을 만들어 준다.
+  workflow_dispatch: # github action 텝에서 수동 실행 버튼을 만들어 준다.
 jobs:
   terraform-destroy:
     runs-on: ubuntu-latest
@@ -10,11 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v4
+
 
       - name: Terraform Init
         run: terraform init
 
+
       - name: Terraform Destroy
-        run: terraform destroy -auto-approve 
+        run: terraform destroy --auto-approve

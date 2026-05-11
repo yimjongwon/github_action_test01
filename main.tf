@@ -139,7 +139,7 @@ resource "aws_instance" "my_ec2" {
     instance_type           = "t3.micro"                        # 서버사양
     subnet_id               = aws_subnet.public_subnet.id       # 위에서 미리 준비한 public subnet 의 id
     vpc_security_group_ids  = [aws_security_group.ssh_sg.id]       # 보안그룹 (여러개 등록할수 있다)
-    key_name                = "aws_key"          # 위에서 미리 준비한 key pair 의 이름
+    key_name                = "aws_action"          # 위에서 미리 준비한 key pair 의 이름
     tags = {
         Name = "my-ec2"
     }
